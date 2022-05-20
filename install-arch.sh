@@ -16,15 +16,17 @@ git config --global user.name "Aryan Singh"
 git config --global user.email zer0as@protonmail.com
 git config --global core.autocrlf input
 
-figlet "Installing vscode" | lolcat
+figlet "Installing vim" | lolcat
 
-sudo sudo pacman -Sy base-devel
-git clone https://aur.archlinux.org/visual-studio-code-bin.git
-cd visual-studio-code-bin
-makepkg -si
-git config --global core.editor "code --wait"
+sudo pacman -Sy vim
 
-figlet "Installing stuff you like" | lolcat
+figlet "Installing stuff you would anyway in some time" | lolcat
 
-sudo pacman -Sy yay fish neofetch vim
-yay -S gotop-bin htop brave
+sudo pacman -Sy yay fish neofetch gh-cli
+yay -S gotop-bin htop
+
+figlet "Setting up fish as the default" | lolcat
+
+# change aryan to your username
+sudo usermod --shell /bin/fish aryan
+chsh -s /bin/fish aryan
